@@ -5,8 +5,6 @@ function updateText(){
     document.getElementById("text-output").innerHTML = textIn;
 }
 
-let textarea = document.getElementsByTagName(textarea)
-
 function makeTextBold(e){
     e.classList.toggle("active");
     document.getElementById("text-output").classList.toggle("bold");
@@ -21,25 +19,11 @@ function underlineText(e){
     document.getElementById("text-output").classList.toggle("underline");
 }
 
-function alignText(e, alignType){
-    document.getElementById("text-output").style.textAlign = alignType;
-    switch (alignType) {
-      case "left":
-        textarea.classList.toggle("active");
-        e.classList.add(alignType);
-        break;
-      case "right":
-        textarea.classList.toggle("active");
-        e.classList.add(alignType);
-        break;
-      case "center":
-        textarea.classList.toggle("active");
-        e.classList.add(alignType);
-        break;
-      case "center":
-        textarea.classList.toggle("active");
-        e.classList.add(alignType);
-        break;
-    }
-
+function alignText(e, alignType) {
+  document.getElementById("text-output").style.textAlign = alignType;
+  let alignButton = document.getElementsByName('align');
+  for (let button of alignButton) {
+    button.classList.remove('active');
+  }
+  e.classList.toggle('active')
 }

@@ -1,0 +1,49 @@
+#text-output{
+    min-height: 250px;
+    border-radius: 3px;
+    padding: 10px;
+    word-wrap: break-word;
+    text-align: left;
+}
+#text-align{
+    min-height: 200px;
+}
+
+.editor .col{
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+
+.bg-light1{
+    background: #c4c4c4;
+    color: #111111;
+}
+
+.form-control:focus{
+    background-color: #c4c4c4;
+}
+
+hr{
+    background: #c4c4c4;
+}
+
+
+.active{
+    background:#007bff !important;
+    color: #c4c4c4 !important;
+}
+
+

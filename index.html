@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fa3a8c1951.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/text_editor.css">
+    <title>Text Editor 🦖 </title>
+</head>
+<body class="text-center container bg-dark text-light">
+    <main>
+        <h1 class="banner p-3 text-primary">Text Editor 🦖</h1>
+        <div class="row">
+            <div class="col">
+                <button id="bold" type="button" onclick="makeTextBold(this)" class="btn bg-light1 ml-1">Bold</button>
+                <button id="italic" type="button" onclick="makeTextItalic(this)" class="btn bg-light1 ml-1">Italic</button>
+                <button id="underline" type="button" onclick="underlineText(this)"
+                    class="btn bg-light1 ml-1">Underline</button>
+                <button id="left-align" type="button" onclick="alignText(this,'left')" class="btn bg-light1 ml-1"><i
+                        class="fas fa-align-left"></i></button>
+                <button id="center-align" type="button" onclick="alignText(this,'center')" class="btn bg-light1 ml-1"><i class="fas fa-align-center"></i></button>
+                <button id="right-align" type="button" onclick="alignText(this,'right')" class="btn bg-light1 ml-1"><i class="fas fa-align-right"></i></button>
+                <button id="justify-align" type="button" onclick="alignText(this,'justify')" class="btn bg-light1 ml-1"><i class="fas fa-align-justify"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="row editor">
+            <div class="col">
+                <div class="form-group">
+                    <label for="text-input">Your Document Text</label>
+                    <textarea id="text-input" rows="9" onkeydown="updateText()"
+                        class="form-control bg-light1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <label for="text-input">Formatted Text</label>
+                <div class="bg-light1" id="text-output"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./text_editor.js"></script>
+</body>
+</html>
